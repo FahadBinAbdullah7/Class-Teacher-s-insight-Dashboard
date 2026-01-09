@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { AlertCircle } from "lucide-react";
+import { AlertCircle, Info } from "lucide-react";
 import Logo from "@/components/logo";
 
 export default function LoginPage() {
@@ -48,6 +48,16 @@ export default function LoginPage() {
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
+             <Alert>
+              <Info className="h-4 w-4" />
+              <AlertTitle>Demo Credentials</AlertTitle>
+              <AlertDescription>
+                <div className="text-sm">
+                  <p><strong>Username:</strong> <span>demo</span></p>
+                  <p><strong>Password:</strong> <span>123456</span></p>
+                </div>
+              </AlertDescription>
+            </Alert>
             <div className="space-y-1">
               <Label htmlFor="username">Username</Label>
               <Input
@@ -55,7 +65,7 @@ export default function LoginPage() {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="contentops"
+                placeholder="ops"
                 required
               />
             </div>
