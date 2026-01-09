@@ -20,7 +20,7 @@ export default function LoginPage() {
     e.preventDefault();
     setError("");
 
-    if (username === "contentops" && password === "Speed&Scale") {
+    if (username === "demo" && password === "123456") {
       // In a real app, you'd get a token from a server
       localStorage.setItem("dashboard_session", "true");
       router.replace("/central-dashboard");
